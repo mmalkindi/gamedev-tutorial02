@@ -2,3 +2,12 @@ res://default_env.tres
 res://scenes/MainLevel.tscn
 res://scenes/BlueShip.tscn
 res://scenes/StonePlatform.tscn
+res://scenes/ObjectiveArea.gd
+res://scenes/Level2.tscn
+res://scenes/GameEnd.tscn
+res://scenes/GreenShip.tscn
+res://scenes/SnowPlatform.tscn
+res://scenes/Obstacle.tscn
+res://scenes/PlatformBlue.gd
+res://scenes/PlatformSideways.gd
+res://scenes/SecondLevel.tscn

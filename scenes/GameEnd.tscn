@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3xxtdymimqh4"]
+
+[sub_resource type="FontVariation" id="FontVariation_rmx0h"]
+variation_embolden = 1.0
+
+[node name="GameEnd" type="Node"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 440.0
+offset_top = 288.0
+offset_right = 726.0
+offset_bottom = 362.0
+theme_override_fonts/font = SubResource("FontVariation_rmx0h")
+theme_override_font_sizes/font_size = 54
+text = "YOU WON!"

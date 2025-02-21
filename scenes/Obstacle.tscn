@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyqoywt5x2uap"]
+
+[ext_resource type="Texture2D" uid="uid://cq5yn6ecuv8qf" path="res://assets/meteorBrown_big1.png" id="1_snkt1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_re773"]
+size = Vector2(20, 17.9099)
+
+[node name="Obstacle" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_snkt1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+rotation = -3.14159
+scale = Vector2(5.09389, -4.52263)
+shape = SubResource("RectangleShape2D_re773")

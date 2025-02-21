@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvdtmke5tjfft"]
+
+[ext_resource type="Script" path="res://scenes/PlatformSideways.gd" id="1_uiprw"]
+[ext_resource type="PackedScene" uid="uid://bd6et1f1hcmqh" path="res://scenes/SnowPlatform.tscn" id="2_sk6s7"]
+[ext_resource type="Script" path="res://scenes/ObjectiveArea.gd" id="3_tptp3"]
+[ext_resource type="PackedScene" uid="uid://b7pi0117dcrvc" path="res://scenes/GreenShip.tscn" id="4_clif0"]
+[ext_resource type="PackedScene" uid="uid://dyqoywt5x2uap" path="res://scenes/Obstacle.tscn" id="5_5prr5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ll5j1"]
+size = Vector2(138.75, 79)
+
+[node name="Level2" type="Node"]
+
+[node name="PlatformWhite" type="Node2D" parent="."]
+position = Vector2(497, 158)
+script = ExtResource("1_uiprw")
+
+[node name="Snow" parent="PlatformWhite" instance=ExtResource("2_sk6s7")]
+
+[node name="Snow2" parent="PlatformWhite" instance=ExtResource("2_sk6s7")]
+position = Vector2(70, 0)
+
+[node name="Snow3" parent="PlatformWhite" instance=ExtResource("2_sk6s7")]
+position = Vector2(140, 0)
+
+[node name="ObjectiveArea" type="Area2D" parent="."]
+script = ExtResource("3_tptp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveArea"]
+position = Vector2(1079, 608)
+shape = SubResource("RectangleShape2D_ll5j1")
+
+[node name="GreenShip" parent="." instance=ExtResource("4_clif0")]
+position = Vector2(567, 58)
+
+[node name="Obstacle" parent="." instance=ExtResource("5_5prr5")]
+position = Vector2(579, 279)
+
+[node name="PlatformWhite2" type="Node2D" parent="."]
+position = Vector2(334, 482)
+script = ExtResource("1_uiprw")
+
+[node name="Snow" parent="PlatformWhite2" instance=ExtResource("2_sk6s7")]
+
+[node name="Snow2" parent="PlatformWhite2" instance=ExtResource("2_sk6s7")]
+position = Vector2(70, 0)
+
+[node name="Snow3" parent="PlatformWhite2" instance=ExtResource("2_sk6s7")]
+position = Vector2(140, 0)
+
+[node name="Obstacle2" parent="." instance=ExtResource("5_5prr5")]
+position = Vector2(912, 577)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1026.0
+offset_top = 594.0
+offset_right = 1134.0
+offset_bottom = 617.0
+theme_override_font_sizes/font_size = 0
+text = "Throw it here!"
+
+[connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]
